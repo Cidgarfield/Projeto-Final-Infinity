@@ -1,0 +1,141 @@
+@font-face {
+    font-family: 'Batman';
+    src: url('../Fonte/batman_forever/batmfa__.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    padding-top: 40px;
+}
+
+.header {
+    position: static;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.moldura {
+    width: 100%;
+    height: auto;
+}
+
+.login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 10px;
+    border: solid 2px #fff;
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin-top: -150px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                0 0 20px rgba(255, 255, 255, 0.3),
+                0 0 30px rgba(255, 255, 255, 0.2),
+                inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    color: white;
+    font-family: 'Batman', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-group input {
+    padding: 10px 15px;
+    border: 2px solid #666;
+    border-radius: 5px;
+    background-color: #222;
+    color: white;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #999;
+    background-color: #333;
+}
+
+.form-group input::placeholder {
+    color: #888;
+}
+
+.button-group {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+#botaoLogin {
+    border-radius: 8px;
+    background-color: #def31c;
+    padding: 12px;
+    margin-top: 10px;
+    font-family: 'Batman';
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#botaoLogin:hover {
+    background-color: #5a6268 !important;
+    transform: scale(1.02);
+}
+
+#botaoVoltar {
+    width: 100px;
+    border-radius: 8px;
+    background-color: brown;
+    padding: 12px;
+    margin-top: 10px;
+    font-family: 'Batman';
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#botaoVoltar:hover {
+    background-color: #5a6268 !important;
+    transform: scale(1.02);
+}
+

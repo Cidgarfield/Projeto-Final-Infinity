@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'Batman';
+    src: url('../Fonte/batman_forever/batmfa__.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Bond';
+    src: url('../Fonte/james_bond_007/JamesBond007-Regular.ttf') format('truetype');
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.cabecalho{
+    height: 150px;
+    width: 100%;
+    padding: 50px;
+    background-color: #1F1F1F;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Batman', sans-serif;
+    gap: 100px;
+}
+
+.containerComponentes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 100px);
+}
+
+.fonteBatman {
+    font-family: 'Batman', sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.divComponentes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.a {
+    display: flex;
+    font-family: 'Bond', sans-serif;
+    font-size: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.b {
+    display: flex;
+    font-family: 'Bond', sans-serif;
+    font-size: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.x {
+    display: flex;
+    font-family: 'Bond', sans-serif;
+    font-size: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.acesso{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    height: 200px;
+    width: 250px;
+    background-color: #000000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.acesso:hover {
+    background-color: #1a1a1a;
+    border-color: #FFD700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    transform: scale(1.05);
+}

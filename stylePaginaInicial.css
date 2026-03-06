@@ -1,0 +1,145 @@
+@font-face {
+    font-family: 'Batman';
+    src: url('/Fonte/batman_forever/batmfa__.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'BatmanForever';
+    src: url('/Fonte/batman_forever/batmfo__.ttf') format('truetype');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+header {
+    position: relative;
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+#cabecalho h1 {
+    font-family: 'Batman', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 50px;   
+}
+
+#cabecalho h2 {
+    font-family: 'Batman', sans-serif;
+    font-weight: bold;
+    margin-top: 0;
+    line-height: 1.5;
+}
+
+#botaoLogin {
+    position: absolute;
+    right: 50px;
+    bottom: 5px;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000000;
+    background-color: #e5ff00;
+    padding: 5px;
+    font-family: 'Batman', sans-serif;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#botaoLogin:hover {
+    background-color: #5a6268 !important;
+    transform: scale(1.02);
+}
+
+#botaoLogout {
+    position: absolute;
+    right: 50px;
+    bottom: 5px;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #000000;
+    background-color: #ff0000;
+    padding: 5px;
+    font-family: 'Batman', sans-serif;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+#botaoLogout:hover {
+    background-color: #5a6268 !important;
+        transform: scale(1.02);
+}
+
+#titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+
+#conteudo {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.fundo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/Image/Logo Wayne.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: fadeInOut 6s infinite;
+    z-index: -1; /* Coloca o fundo atrás do conteúdo */
+}
+.texto {
+    display: flex;
+    position: absolute;
+    gap: 50px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Batman', sans-serif;
+    font-size: 18px;
+    text-align: center;
+    z-index: 1; /* Coloca o texto acima do fundo */
+}
+
+.card-1, .card-2, .card-3 {
+    width: 300px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    border-radius: 10px;
+    border: solid 2px #ffffff;
+    font-family: 'Batman', sans-serif;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 20px;
+    z-index: 1; /* Coloca o card acima do fundo */
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5),
+                0 0 20px rgba(255, 255, 255, 0.3),
+                0 0 30px rgba(255, 255, 255, 0.2),
+                inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.card-1:hover, .card-2:hover, .card-3:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+@keyframes fadeInOut {
+    0%   { opacity: 0; }   /* invisível */
+    50%  { opacity: 0.1; }   /* totalmente visível */
+    100% { opacity: 0; }   /* invisível novamente */
+}

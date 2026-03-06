@@ -1,0 +1,184 @@
+@font-face {
+    font-family: 'Batman';
+    src: url('../Fonte/batman_forever/batmfa__.ttf') format('truetype');
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+.cabecalho {
+    height: 150px;
+    width: 100%;
+    padding: 50px;
+    background-color: #1F1F1F;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Batman', sans-serif;
+    gap: 20px;
+}
+
+.cabecalho h2 {
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cabecalho h2:hover {
+    color: #FFD700;
+    transform: scale(1.05);
+}
+
+.cabecalho a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.cabecalho a:hover {
+    color: #FFD700;
+}
+
+/* Estilização do Modal */
+.modal-batman .modal-content {
+    background-color: #1F1F1F;
+    border: 2px solid #FFD700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.modal-batman .modal-header {
+    border-bottom: 1px solid #FFD700;
+}
+
+.modal-batman .modal-title {
+    font-family: 'Batman', sans-serif;
+    color: #FFD700;
+    font-size: 24px;
+}
+
+.modal-batman .modal-footer {
+    border-top: 1px solid #FFD700;
+}
+
+.modal-batman .form-label {
+    color: #FFD700;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.modal-batman .form-control-dark,
+.modal-batman .form-select-dark {
+    background-color: #121212;
+    border: 1px solid #FFD700;
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.modal-batman .form-control-dark:focus,
+.modal-batman .form-select-dark:focus {
+    background-color: #1a1a1a;
+    border-color: #FFD700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    color: #ffffff;
+}
+
+.modal-batman .form-control-dark::placeholder {
+    color: #888888;
+}
+
+.modal-batman .form-select-dark option {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.btn-adicionar {
+    background-color: #FFD700;
+    border: none;
+    color: #121212;
+    font-weight: bold;
+    font-family: 'Batman', sans-serif;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-adicionar:hover {
+    background-color: #FFC700;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+    transform: scale(1.05);
+    color: #000000;
+}
+
+.btn-cancelar {
+    background-color: #121212;
+    border: 1px solid #FFD700;
+    color: #FFD700;
+    font-weight: bold;
+    font-family: 'Batman', sans-serif;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-cancelar:hover {
+    background-color: #1a1a1a;
+    border-color: #FFD700;
+    color: #FFD700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* Estilização da Lista de Veículos */
+#containerVeiculos {
+    list-style: none;
+    padding: 20px 50px;
+    margin: 0;
+}
+
+.container-item {
+    background-color: #1F1F1F;
+    border: 1px solid #FFD700;
+    padding: 15px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-family: 'Batman', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.container-item:hover {
+    background-color: #2a2a2a;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+    transform: translateX(5px);
+}
+
+.botaoExcluirVeiculo {
+    background-color: #FF1C1C;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: 'Batman', sans-serif;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+.botaoExcluirVeiculo:hover {
+    background-color: #bdb6b6;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.botaoEditarVeiculo {
+    background-color: #FFD700;
+    border-radius: 5px;
+    border: none;
+    color: #121212;
+    font-weight: bold;
+    font-family: 'Batman', sans-serif;
+    padding: 8px 15px;
+    transition: all 0.3s ease;
+}
+
+.botaoEditarVeiculo:hover {
+    background-color: #bdb6b6;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
