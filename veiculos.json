@@ -1,0 +1,9 @@
+[
+  {
+    "nome": "Batmóvel",
+    "tipo": "terrestre",
+    "status": "missao",
+    "descricao": "Veiculo terrestre de combate.",
+    "id": 1
+  }
+]
