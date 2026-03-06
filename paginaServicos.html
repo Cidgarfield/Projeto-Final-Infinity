@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Style/styleServicos.css">
+    <title>Serviços</title>
+</head>
+<body>
+    <header>
+        <img src="../Image/MolduraEsquerda.png" alt="">
+        <h1>Serviços</h1>
+        <button onclick="window.location.href='../Templates/paginaInicial.html'">Voltar</button>
+        <img src="../Image/MolduraDireita.png" alt="">
+    </header>
+    
+    <button id="btnAdicionar" 
+        class="btn btn-success"
+        data-bs-toggle="modal" 
+        data-bs-target="#modalServico"
+        style="visibility: hidden;">
+    Adicionar Serviço
+    </button>
+
+    
+    <div id="conteudo">
+
+        <div class="fundo"></div>
+        <div id="textoServicos">
+            <h2>Conheçam Nossos Serviços</h2>
+            <p>Fique por dentro da gama de serviços que a nossa empresa oferece. Acompanhe tudo aqui!</p>               
+        </div>
+        <div id="listaServico" class="container mt-4"></div>
+
+    </div>
+
+    <div class="modal fade" id="modalServico" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark text-white">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Novo Serviço</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form id="formServico">
+  
+          <div class="mb-3">
+            <label class="form-label">Serviço</label>
+            <input type="text" class="form-control" id="tituloServico" required>
+          </div>   
+
+          <div class="mb-3">
+            <label class="form-label">Conteúdo</label>
+            <textarea class="form-control" id="conteudoServico" rows="3" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Imagem</label>
+            <input type="text" class="form-control" id="imagemServico" placeholder="URL da imagem">
+          </div>
+
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button class="btn btn-primary" id="btnConfirmarAdicionar">Salvar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+    <div class="modal fade" id="modalEditar" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark text-white">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Editar Serviço</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form id="formEditarServico">
+  
+          <div class="mb-3">
+            <label class="form-label">Serviço</label>
+            <input type="text" class="form-control" id="tituloServicoEditar" required>
+          </div>   
+
+          <div class="mb-3">
+            <label class="form-label">Conteúdo</label>
+            <textarea class="form-control" id="conteudoServicoEditar" rows="3" required></textarea>
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label">Imagem</label>
+            <input type="text" class="form-control" id="imagemServicoEditar" placeholder="URL da imagem">
+          </div>
+
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button class="btn btn-primary" id="btnConfirmarEditar">Salvar</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+
+    <script src="/Script/servicos.js"></script>
+
+</body>
+</html>

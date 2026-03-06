@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Style/styleEquipamento.css">
+    <title>Equipamentos</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <img src="../Image/MolduraEsquerda.png" alt="">
+        <h2><a href="paginaGerenciamento.html">VOLTAR</a></h2>
+        <h2 id="adicionarEquipamento">ADICIONAR</h2>
+        <img src="../Image/MolduraDireita.png" alt="">
+    </header>
+
+    <!-- Modal para Adicionar Equipamento -->
+    <div class="modal fade" id="modalAdicionarEquipamento" tabindex="-1" aria-labelledby="modalAdicionarEquipamentoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-batman">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAdicionarEquipamentoLabel">Adicionar Novo Equipamento</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formAdicionarEquipamento">
+                        <div class="mb-3">
+                            <label for="nomeEquipamento" class="form-label">Nome do Equipamento</label>
+                            <input type="text" class="form-control form-control-dark" id="nomeEquipamento" placeholder="Ex: Cinto de Utilidades" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tipoEquipamento" class="form-label">Tipo</label>
+                            <select class="form-select form-select-dark" id="tipoEquipamento" required>
+                                <option value="">Selecione o tipo</option>
+                                <option value="combate">Combate</option>
+                                <option value="investigação">Investigação</option>
+                                <option value="mobilidade">Mobilidade</option>
+                                <option value="especial">Especial</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="statusEquipamento" class="form-label">Status</label>
+                            <select class="form-select form-select-dark" id="statusEquipamento" required>
+                                <option value="">Selecione o status</option>
+                                <option value="disponivel">Disponível</option>
+                                <option value="manutencao">Manutenção</option>
+                                <option value="missao">Equipado</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="descricaoEquipamento" class="form-label">Descrição</label>
+                            <textarea class="form-control form-control-dark" id="descricaoEquipamento" rows="3" placeholder="Descrição do equipamento..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary btn-adicionar" id="btnConfirmarAdicionar">Adicionar Equipamento</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Editar Equipamento -->
+    <div class="modal fade" id="modalEditarEquipamento" tabindex="-1" aria-labelledby="modalEditarEquipamentoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-batman">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditarEquipamentoLabel">Editar Equipamento</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formEditarEquipamento">
+                        <div class="mb-3">
+                            <label for="nomeEquipamentoEditar" class="form-label">Nome do Equipamento</label>
+                            <input type="text" class="form-control form-control-dark" id="nomeEquipamentoEditar" placeholder="Ex: Batmóvel" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tipoEquipamentoEditar" class="form-label">Tipo</label>
+                            <select class="form-select form-select-dark" id="tipoEquipamentoEditar" required>
+                                <option value="">Selecione o tipo</option>
+                                <option value="combate">Combate</option>
+                                <option value="investigacao">Investigação</option>
+                                <option value="mobilidade">Mobilidade</option>
+                                <option value="especial">Especial</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="statusEquipamentoEditar" class="form-label">Status</label>
+                            <select class="form-select form-select-dark" id="statusEquipamentoEditar" required>
+                                <option value="">Selecione o status</option>
+                                <option value="disponivel">Disponível</option>
+                                <option value="manutencao">Manutenção</option>
+                                <option value="missao">Equipado</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="descricaoEquipamentoEditar" class="form-label">Descrição</label>
+                            <textarea class="form-control form-control-dark" id="descricaoEquipamentoEditar" rows="3" placeholder="Descrição do equipamento..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary btn-adicionar" id="btnConfirmarEditar">Editar Equipamento</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="containerEquipamentos"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="/Script/gerenciamentoEquipamentos.js"></script>
+</body>
+</html>

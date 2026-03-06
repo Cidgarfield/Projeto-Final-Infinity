@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Style/stylePaginaInicial.css">
+    <title>Página Inicial</title>
+</head>
+<body>
+    <header>
+        <div id="cabecalho">
+            <div id="titulo">
+                <img src="/Image/MolduraEsquerda.png" alt="">
+                <h1>Bem-vindos as Indústrias Wayne!</h1>
+                <img src="/Image/MolduraDireita.png" alt="">
+            </div><hr>
+            <h2>
+                Aqui você encontrará as últimas notícias, atualizações e informações sobre nossos serviços. 
+                Fique à vontade para explorar e descobrir tudo o que temos a oferecer. Estamos aqui para ajudar e garantir que sua experiência seja a melhor possível. 
+                Aproveite sua visita!
+            </h2>                
+        </div>        
+            <button id="botaoLogin" onclick="window.location.href='../Templates/index.html'">LOGIN</button>
+            <button id="botaoLogout" onclick="logout()" style="display:none">LOGOUT</button>
+    </header>
+
+    <div id="conteudo">
+
+        <div class="fundo"></div>
+        <div class="texto">
+            <div class="card-1" onclick="window.location.href='../Templates/paginaNoticias.html'">
+                <h3>Notícias Recentes</h3>
+                <p>Fique por dentro das últimas novidades e atualizações sobre nossos produtos e serviços.</p>
+            </div>
+    
+            <div class="card-2" onclick="window.location.href='../Templates/paginaServicos.html'">
+                <h3>Serviços</h3>
+                <p>Conheça os serviços que oferecemos para atender às suas necessidades.</p>
+            </div>
+    
+            <div class="card-3" onclick="window.location.href='../Templates/paginaContato.html'">
+                <h3>Contato</h3>
+                <p>Entre em contato conosco para obter suporte ou fazer perguntas sobre nossos produtos.</p>
+            </div>        
+        </div>
+
+    </div>
+
+    <script src="/Script/paginaInicialLogin.js"></script>
+    <script src="/Script/main.js"></script>        
+</body>
+</html>

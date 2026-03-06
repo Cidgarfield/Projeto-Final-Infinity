@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Style/styleVeiculos.css">
+    <title>Veiculos</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <img src="../Image/MolduraEsquerda.png" alt="">
+        <h2><a href="paginaGerenciamento.html">VOLTAR</a></h2>
+        <h2 id="adicionarVeiculo">ADICIONAR</h2>
+        <img src="../Image/MolduraDireita.png" alt="">
+    </header>
+
+    <!-- Modal para Adicionar Veículo -->
+    <div class="modal fade" id="modalAdicionarVeiculo" tabindex="-1" aria-labelledby="modalAdicionarVeiculoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-batman">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalAdicionarVeiculoLabel">Adicionar Novo Veículo</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formAdicionarVeiculo">
+                        <div class="mb-3">
+                            <label for="nomeVeiculo" class="form-label">Nome do Veículo</label>
+                            <input type="text" class="form-control form-control-dark" id="nomeVeiculo" placeholder="Ex: Batmóvel" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tipoVeiculo" class="form-label">Tipo</label>
+                            <select class="form-select form-select-dark" id="tipoVeiculo" required>
+                                <option value="">Selecione o tipo</option>
+                                <option value="terrestre">Terrestre</option>
+                                <option value="aereo">Aéreo</option>
+                                <option value="aquatico">Aquático</option>
+                                <option value="espacial">Espacial</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="statusVeiculo" class="form-label">Status</label>
+                            <select class="form-select form-select-dark" id="statusVeiculo" required>
+                                <option value="">Selecione o status</option>
+                                <option value="disponivel">Disponível</option>
+                                <option value="manutencao">Em Manutenção</option>
+                                <option value="missao">Em Missão</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="descricaoVeiculo" class="form-label">Descrição</label>
+                            <textarea class="form-control form-control-dark" id="descricaoVeiculo" rows="3" placeholder="Descrição do veículo..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary btn-adicionar" id="btnConfirmarAdicionar">Adicionar Veículo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal para Editar Veículo -->
+    <div class="modal fade" id="modalEditarVeiculo" tabindex="-1" aria-labelledby="modalEditarVeiculoLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-batman">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalEditarVeiculoLabel">Editar Veículo</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="formEditarVeiculo">
+                        <div class="mb-3">
+                            <label for="nomeVeiculoEditar" class="form-label">Nome do Veículo</label>
+                            <input type="text" class="form-control form-control-dark" id="nomeVeiculoEditar" placeholder="Ex: Batmóvel" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="tipoVeiculoEditar" class="form-label">Tipo</label>
+                            <select class="form-select form-select-dark" id="tipoVeiculoEditar" required>
+                                <option value="">Selecione o tipo</option>
+                                <option value="terrestre">Terrestre</option>
+                                <option value="aereo">Aéreo</option>
+                                <option value="aquatico">Aquático</option>
+                                <option value="espacial">Espacial</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="statusVeiculoEditar" class="form-label">Status</label>
+                            <select class="form-select form-select-dark" id="statusVeiculoEditar" required>
+                                <option value="">Selecione o status</option>
+                                <option value="disponivel">Disponível</option>
+                                <option value="manutencao">Em Manutenção</option>
+                                <option value="missao">Em Missão</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="descricaoVeiculoEditar" class="form-label">Descrição</label>
+                            <textarea class="form-control form-control-dark" id="descricaoVeiculoEditar" rows="3" placeholder="Descrição do veículo..."></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-cancelar" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary btn-adicionar" id="btnConfirmarEditar">Editar Veículo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="containerVeiculos"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="../Script/gerenciamentoVeiculos.js"></script>
+</body>
+</html>

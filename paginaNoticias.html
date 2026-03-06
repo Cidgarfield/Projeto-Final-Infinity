@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="../Style/styleNoticias.css">
+    <title>Noticias</title>
+</head>
+<body>
+    <header>
+        <img src="../Image/MolduraEsquerda.png" alt="">
+        <h1>Notícias</h1>
+        <button onclick="window.location.href='../Templates/paginaInicial.html'">Voltar</button>
+        <img src="../Image/MolduraDireita.png" alt="">
+    </header>
+
+    <button id="btnAdicionar" 
+        class="btn btn-success"
+        data-bs-toggle="modal" 
+        data-bs-target="#modalNoticia"
+        style="visibility: hidden;">
+    Adicionar Notícia
+    </button>
+
+    <div id="conteudo">
+        <div class="fundo">
+          
+        </div>
+        <div id="texto">
+            <h2>Últimas Notícias</h2>
+            <p>Fique por dentro das últimas notícias e atualizações das Indústrias Wayne. Desde novos lançamentos de, até eventos especiais e curiosidades sobre a Empresa. Acompanhe tudo aqui!</p>     
+        </div>
+        <div id="listaNoticias" class="container mt-4">
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalNoticia" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark text-white">
+
+          <div class="modal-header">
+            <h5 class="modal-title">Nova Notícia</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <form id="formNoticia">
+      
+              <div class="mb-3">
+                <label class="form-label">Data</label>
+                <input type="date" class="form-control" id="dataNoticia" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Título</label>
+                <input type="text" class="form-control" id="tituloNoticia" required>
+              </div>   
+
+              <div class="mb-3">
+                <label class="form-label">Conteúdo</label>
+                <textarea class="form-control" id="conteudoNoticia" rows="3" required></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Imagem</label>
+                <input type="text" class="form-control" id="imagemNoticia" placeholder="URL da imagem">
+              </div>
+
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" class="btn btn-primary" id="btnConfirmarAdicionar">Salvar</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalEditar" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content bg-dark text-white">
+
+          <div class="modal-header">
+            <h5 class="modal-title">Editar Notícia</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+          </div>
+
+          <div class="modal-body">
+            <form id="formEditarNoticia">
+      
+              <div class="mb-3">
+                <label class="form-label">Data</label>
+                <input type="date" class="form-control" id="dataNoticiaEditar" required>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Título</label>
+                <input type="text" class="form-control" id="tituloNoticiaEditar" required>
+              </div>   
+
+              <div class="mb-3">
+                <label class="form-label">Conteúdo</label>
+                <textarea class="form-control" id="conteudoNoticiaEditar" rows="3" required></textarea>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label">Imagem</label>
+                <input type="text" class="form-control" id="imagemNoticiaEditar" placeholder="URL da imagem">
+              </div>
+
+            </form>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button class="btn btn-primary" id="btnConfirmarEditar">Salvar</button>
+          </div>
+        </div>
+      </div>    
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="../Script/noticias.js"></script>
+</body>
+</html>
